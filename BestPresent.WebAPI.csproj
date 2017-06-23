@@ -43,6 +43,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper, Version=4.2.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.4.2.1\lib\net45\AutoMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AutoMapper.Attributes, Version=1.0.20.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.Attributes.1.0.20.0\lib\net45\AutoMapper.Attributes.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
       <Private>True</Private>
@@ -180,6 +188,7 @@
     <Compile Include="Discount.cs">
       <DependentUpon>BestPresentData.tt</DependentUpon>
     </Compile>
+    <Compile Include="Extensions\Extensions.cs" />
     <Compile Include="Feed.cs">
       <DependentUpon>BestPresentData.tt</DependentUpon>
     </Compile>
@@ -192,6 +201,10 @@
     <Compile Include="HotTour.cs">
       <DependentUpon>BestPresentData.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\HotelsModel.cs" />
+    <Compile Include="Models\ModelMapper.cs" />
+    <Compile Include="Models\PagedResults.cs" />
+    <Compile Include="Models\Pagination.cs" />
     <Compile Include="News.cs">
       <DependentUpon>BestPresentData.tt</DependentUpon>
     </Compile>
@@ -221,6 +234,7 @@
     <Content Include="BestPresentData.edmx.diagram">
       <DependentUpon>BestPresentData.edmx</DependentUpon>
     </Content>
+    <Content Include=".gitignore" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -230,7 +244,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
