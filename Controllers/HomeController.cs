@@ -30,6 +30,8 @@ namespace BestPresent.WebAPI.Controllers
                                  Id = r.Id,
                                  Name = r.Name,
                                  ImageData = r.ImageData,
+                                 Category = r.Category,
+                                 Description = r.Description,
                              };
                 return Ok(hotels);
             }
