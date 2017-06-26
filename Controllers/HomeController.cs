@@ -70,5 +70,12 @@ namespace BestPresent.WebAPI.Controllers
                 },
             };
         }
+        public HttpResponseMessage Get(int id)
+        {
+            var hotel = context.Hotels.First(p => p.Id == id);
+            return Request.CreateResponse(
+                HttpStatusCode.OK,
+                hotel);
+        }
     }
 }
