@@ -181,6 +181,7 @@
     <Compile Include="Comment.cs">
       <DependentUpon>BestPresentData.tt</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Country.cs">
       <DependentUpon>BestPresentData.tt</DependentUpon>
