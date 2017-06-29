@@ -182,6 +182,7 @@
       <DependentUpon>BestPresentData.tt</DependentUpon>
     </Compile>
     <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\CountryController.cs" />
     <Compile Include="Controllers\HotelController.cs" />
     <Compile Include="Country.cs">
       <DependentUpon>BestPresentData.tt</DependentUpon>
@@ -202,6 +203,7 @@
     <Compile Include="HotTour.cs">
       <DependentUpon>BestPresentData.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\CountriesModel.cs" />
     <Compile Include="Models\HotelsModel.cs" />
     <Compile Include="Models\ModelMapper.cs" />
     <Compile Include="Models\PagedResults.cs" />
