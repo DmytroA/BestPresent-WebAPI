@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace BestPresent.WebAPI.Controllers
 {
     [EnableCors("*", "*", "*")]
-    public class HomeController : BaseController
+    public class HotelController : BaseController
     {
         Entities context = new Entities();
 
