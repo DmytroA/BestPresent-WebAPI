@@ -15,19 +15,6 @@ namespace BestPresent.WebAPI.Controllers
 
         public async Task<IHttpActionResult> Get(int? page = 1, int pageSize = 5, string orderBy = nameof(Hotel.Id), bool ascending = true)
         {
-            if (page == 1)
-            {
-                var hotels = from r in context.Hotels.Take(pageSize)
-                             select new
-                             {
-                                 Id = r.Id,
-                                 Name = r.Name,
-                                 ImageData = r.ImageData,
-                                 Category = r.Category,
-                                 Description = r.Description,
-                             };
-                return Ok(hotels);
-            }
             var hotel = await CreatePagedResults<Hotel, HotelsModel>
             (context.Hotels, page.Value, pageSize, orderBy, ascending);
             return Ok(hotel);

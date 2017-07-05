@@ -34,10 +34,10 @@ namespace BestPresent.WebAPI.Controllers
                 data = results,
                 Pagination = new Pagination
                 {
-                    PageNumber = page,
-                    PageSize = results.Count,
-                    TotalNumberOfPages = totalPageCount,
-                    TotalNumberOfRecords = totalNumberOfRecords,
+                    page = page,
+                    perPage = results.Count,
+                    totalNumberOfPages = totalPageCount,
+                    total = totalNumberOfRecords,
                 },
             };
         }

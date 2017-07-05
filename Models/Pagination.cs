@@ -7,12 +7,12 @@ namespace BestPresent.WebAPI.Models
 {
     public class Pagination
     {
-        public int PageNumber { get; set; }
+        public int page { get; set; }
 
-        public int PageSize { get; set; }
+        public int perPage { get; set; }
 
-        public int TotalNumberOfPages { get; set; }
+        public int totalNumberOfPages { get; set; }
 
-        public int TotalNumberOfRecords { get; set; }
+        public int total { get; set; }
     }
 }
