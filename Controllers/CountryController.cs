@@ -43,5 +43,16 @@ namespace BestPresent.WebAPI.Controllers
             return Request.CreateResponse(
                 HttpStatusCode.Created);
         }
+
+        public HttpResponseMessage Put(int id, CountriesModel country) {
+            Country dbEntry = context.Countries.Find(id);
+            byte[] imageBytes = Convert.FromBase64String(country.ImagePath);
+            dbEntry.Description = country.Description;
+            dbEntry.Name = country.Name;
+            dbEntry.ImageData = imageBytes;
+            context.SaveChanges();
+            return Request.CreateResponse(
+                HttpStatusCode.Created);
+        }
     }
 }
